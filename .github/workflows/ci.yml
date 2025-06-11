@@ -3,6 +3,7 @@ name: GitHub Actions Build and Deploy
 on:
   push:
     branches:
+      - master
       - main
       - v*
     paths:
@@ -40,3 +41,4 @@ jobs:
           # token: ${{ secrets.WEBSITE }}
           branch: gh-pages
           folder: site
+          target-folder: ${{github.ref}}
